@@ -41,7 +41,13 @@ public class Main {
         int minZahl = Problem2.findeMinimaleZahl(zahlen);
         System.out.println("Minimale Zahl: " + minZahl);
 
+        // 2.3: Suma maxima cu n-1 numere
+        int maxSumme = Problem2.findeMaximaleSumme(zahlen);
+        System.out.println("Maximale Summe von n-1 Zahlen: " + maxSumme);
 
+        // 2.4: Suma minima cu n-1 numere
+        int minSumme = Problem2.findeMinimaleSumme(zahlen);
+        System.out.println("Minimale Summe von n-1 Zahlen: " + minSumme);
 
     }
 
