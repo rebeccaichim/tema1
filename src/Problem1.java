@@ -35,4 +35,21 @@ public class Problem1 {
         return (double) summe / noten.length;
     }
 
+    public static int[] abgerundeteNoten(int[] noten) {
+        int[] abgerundeteArray = new int[noten.length];
+        for (int i = 0; i < noten.length; i++) {
+            int note = noten[i];
+            if (note < 38) {
+                abgerundeteArray[i] = note;
+            } else {
+                int remainder = note % 5;
+                if (remainder >= 3) {
+                    abgerundeteArray[i] = note + (5 - remainder);
+                } else {
+                    abgerundeteArray[i] = note;
+                }
+            }
+        }
+        return abgerundeteArray;
+    }
 }

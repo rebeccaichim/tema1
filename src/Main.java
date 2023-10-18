@@ -15,6 +15,15 @@ public class Main {
         double durchschnitt = Problem1.berechneDurchschnitt(noten);
         System.out.println("Media notelor este: " + durchschnitt);
 
+
+
+        int[] abgerundete = Problem1.abgerundeteNoten(noten);
+        System.out.print("Notele abgerundete sunt: ");
+        for (int note : abgerundete) {
+            System.out.print(note + " ");
+        }
+        System.out.println();
+
     }
 
 }
