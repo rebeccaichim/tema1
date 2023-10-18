@@ -52,4 +52,14 @@ public class Problem1 {
         }
         return abgerundeteArray;
     }
+    public static int maxAbgerundeteNote(int[] noten) {
+        int maxAbgerundete = -1;
+        for (int note : noten) {
+            int abgerundeteNote = abgerundeteNoten(new int[] {note})[0];
+            if (abgerundeteNote > maxAbgerundete) {
+                maxAbgerundete = abgerundeteNote;
+            }
+        }
+        return maxAbgerundete;
+    }
 }

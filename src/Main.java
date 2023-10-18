@@ -26,6 +26,11 @@ public class Main {
 
 
 
+        int maxAbgerundete = Problem1.maxAbgerundeteNote(noten);
+        System.out.println("Nota maximă abgerundete este: " + maxAbgerundete);
+
+
+
     }
 
 }
