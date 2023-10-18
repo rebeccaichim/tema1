@@ -8,4 +8,14 @@ public class Problem2 {
         }
         return max;
     }
+
+    public static int findeMinimaleZahl(int[] zahlen) {
+        int min = zahlen[0];
+        for (int zahl : zahlen) {
+            if (zahl < min) {
+                min = zahl;
+            }
+        }
+        return min;
+    }
 }

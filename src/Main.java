@@ -2,7 +2,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        //1
+        // 1
         int[] noten = {84, 29, 65, 38, 42};
 
         // 1.1: Notele "nicht ausreichend"
@@ -30,12 +30,16 @@ public class Main {
         System.out.println("Nota maxima abgerundete este: " + maxAbgerundete);
 
 
-        //2
+        // 2
         int[] zahlen = {4, 8, 3, 10, 17};
 
-        //2.1: Numarul maxim
+        // 2.1: Numarul maxim
         int maxZahl = Problem2.findeMaximaleZahl(zahlen);
         System.out.println("Maximale Zahl: " + maxZahl);
+
+        // 2.2: Numarul minim
+        int minZahl = Problem2.findeMinimaleZahl(zahlen);
+        System.out.println("Minimale Zahl: " + minZahl);
 
 
 
