@@ -10,7 +10,13 @@ public class Main {
         }
         System.out.println();
 
+
+
+        double durchschnitt = Problem1.berechneDurchschnitt(noten);
+        System.out.println("Media notelor este: " + durchschnitt);
+
     }
+
 }
 
 

@@ -22,6 +22,17 @@ public class Problem1 {
         }
         return nichtAusreichende;
     }
+    public static double berechneDurchschnitt(int[] noten) {
+        if (noten.length == 0) {
+            return 0;
+        }
 
+        int summe = 0;
+        for (int note : noten) {
+            summe += note;
+        }
+
+        return (double) summe / noten.length;
+    }
 
 }
