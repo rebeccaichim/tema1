@@ -58,4 +58,16 @@ public class Problem3 {
         }
         return produkt;
     }
+    public static int[] berechneDivision(int[] zahl1, int ziffer) {
+        int n = zahl1.length;
+        int[] quotient = new int[n];
+        int remainder = 0;
+        for (int i = 0; i < n; i++) {
+            int tempDivision = zahl1[i] + remainder * 10;
+            quotient[i] = tempDivision / ziffer;
+            remainder = tempDivision % ziffer;
+        }
+        return quotient;
+
+    }
 }

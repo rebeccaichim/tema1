@@ -65,6 +65,10 @@ public class Main {
         int[] multiplikation = Problem3.berechneMultiplikation(großeZahl1, 2);
         System.out.println("Multiplikation der großen Zahl: " + Arrays.toString(multiplikation));
 
+        // 3.4
+        int[] division = Problem3.berechneDivision(großeZahl1, 2);
+        System.out.println("Division der großen Zahl: " + Arrays.toString(division));
+
     }
 
 }
