@@ -49,6 +49,20 @@ public class Main {
         int minSumme = Problem2.findeMinimaleSumme(zahlen);
         System.out.println("Minimale Summe von n-1 Zahlen: " + minSumme);
 
+        // 3
+        int[] großeZahl1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] großeZahl2 = {8, 7, 0, 0, 0, 0, 0, 0, 0};
+
+        // 3.1
+        int[] summe = Problem3.berechneSumme(großeZahl1, großeZahl2);
+        System.out.println("Summe der großen Zahlen: " + Arrays.toString(summe));
+
+        // 3.2
+        int[] differenz = Problem3.berechneDifferenz(großeZahl1, großeZahl2);
+        System.out.println("Differenz der großen Zahlen: " + Arrays.toString(differenz));
+
+
+
     }
 
 }
