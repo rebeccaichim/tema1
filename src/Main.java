@@ -61,7 +61,9 @@ public class Main {
         int[] differenz = Problem3.berechneDifferenz(großeZahl1, großeZahl2);
         System.out.println("Differenz der großen Zahlen: " + Arrays.toString(differenz));
 
-
+        // 3.3
+        int[] multiplikation = Problem3.berechneMultiplikation(großeZahl1, 2);
+        System.out.println("Multiplikation der großen Zahl: " + Arrays.toString(multiplikation));
 
     }
 

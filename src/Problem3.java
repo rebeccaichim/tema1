@@ -36,5 +36,26 @@ public class Problem3 {
             differenz[i] = tempDifferenz;
         }
         return differenz;
+
+
+    }
+    public static int[] berechneMultiplikation(int[] zahl1, int ziffer) {
+        int n = zahl1.length;
+        int carry = 0;
+        int[] produkt = new int[n];
+        for (int i = n - 1; i >= 0; i--) {
+            int tempProdukt = zahl1[i] * ziffer + carry;
+            produkt[i] = tempProdukt % 10;
+            carry = tempProdukt / 10;
+        }
+        if (carry > 0) {
+            int[] neuesProdukt = new int[n + 1];
+            neuesProdukt[0] = carry;
+            for (int i = 1; i <= n; i++) {
+                neuesProdukt[i] = produkt[i - 1];
+            }
+            return neuesProdukt;
+        }
+        return produkt;
     }
 }
