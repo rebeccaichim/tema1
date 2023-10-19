@@ -69,6 +69,15 @@ public class Main {
         int[] division = Problem3.berechneDivision(großeZahl1, 2);
         System.out.println("Division der großen Zahl: " + Arrays.toString(division));
 
+        // 4
+        int[] tastaturen = {40, 35, 70, 15, 45};
+        int[] usbLaufwerke = {20, 25, 30, 10};
+        int budget = 60;
+
+        // 4.1
+        int billigsteTastatur = Problem4.findeBilligsteTastatur(tastaturen);
+        System.out.println("Die billigste Tastatur: " + billigsteTastatur);
+
     }
 
 }
