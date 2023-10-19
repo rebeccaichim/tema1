@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class Problem3 {
+    // Suma numerelor ca array
     public static int[] berechneSumme(int[] zahl1, int[] zahl2) {
         int n = zahl1.length;
         int carry = 0;
@@ -21,6 +22,7 @@ public class Problem3 {
         return summe;
     }
 
+    // Diferenta numerelor ca array
     public static int[] berechneDifferenz(int[] zahl1, int[] zahl2) {
         int n = zahl1.length;
         int borrow = 0;
@@ -36,9 +38,9 @@ public class Problem3 {
             differenz[i] = tempDifferenz;
         }
         return differenz;
-
-
     }
+
+    // Inmultirea unui numar cu cifra
     public static int[] berechneMultiplikation(int[] zahl1, int ziffer) {
         int n = zahl1.length;
         int carry = 0;
@@ -58,6 +60,8 @@ public class Problem3 {
         }
         return produkt;
     }
+
+    // Impartirea unui numar la cifra
     public static int[] berechneDivision(int[] zahl1, int ziffer) {
         int n = zahl1.length;
         int[] quotient = new int[n];

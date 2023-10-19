@@ -1,4 +1,5 @@
 public class Problem2 {
+    // Cel mai mare nr
     public static int findeMaximaleZahl(int[] zahlen) {
         int max = zahlen[0];
         for (int zahl : zahlen) {
@@ -9,6 +10,7 @@ public class Problem2 {
         return max;
     }
 
+    // Cel mai mic nr
     public static int findeMinimaleZahl(int[] zahlen) {
         int min = zahlen[0];
         for (int zahl : zahlen) {
@@ -18,6 +20,7 @@ public class Problem2 {
         }
         return min;
     }
+    // Suma maxima cu n-1 nr
     public static int findeMaximaleSumme(int[] zahlen) {
         int summe = 0;
         int min = zahlen[0];
@@ -29,6 +32,7 @@ public class Problem2 {
         }
         return summe - min;
     }
+    // Suma minima cu n-1 nr
     public static int findeMinimaleSumme(int[] zahlen) {
         int summe = 0;
         int max = -1;
