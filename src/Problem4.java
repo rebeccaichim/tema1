@@ -15,6 +15,8 @@ public class Problem4 {
         }
         return billigste;
     }
+
+    // Cel mai scump obiect
     public static int findeTeuerstenGegenstand(int[] tastaturen, int[] usbLaufwerke) {
         int teuersterTastatur = 0;
         if (tastaturen.length > 0) {
@@ -35,5 +37,28 @@ public class Problem4 {
             }
         }
         return Math.max(teuersterTastatur, teuerstesUsbLaufwerk);
+    }
+
+    // Cea mai scumpa unitate pe care si-o permite Markus
+    public static int findeTeuerstesUsbLaufwerk(int[] usbLaufwerke, int budget) {
+        int teuerstesUsb = -1;
+        for (int preis : usbLaufwerke) {
+            if (preis <= budget && preis > teuerstesUsb) {
+                teuerstesUsb = preis;
+            }
+        }
+        return teuerstesUsb;
+    }
+
+    // Cea mai ieftina tastatura + cea mai scumpa unitate care intra in buget
+    public static int berechneAusgaben(int budget, int[] tastaturen, int[] usbLaufwerke) {
+        int billigsteTastatur = findeBilligsteTastatur(tastaturen);
+        int teuerstesUsb = findeTeuerstesUsbLaufwerk(usbLaufwerke, budget - billigsteTastatur);
+
+        if (billigsteTastatur == -1 || teuerstesUsb == -1) {
+            return -1;
+        }
+
+        return billigsteTastatur + teuerstesUsb;
     }
 }

@@ -72,7 +72,7 @@ public class Main {
         // 4
         int[] tastaturen = {40, 35, 70, 15, 45};
         int[] usbLaufwerke = {20, 25, 30, 10};
-        int budget = 60;
+        int budget = 40;
 
         // 4.1
         int billigsteTastatur = Problem4.findeBilligsteTastatur(tastaturen);
@@ -82,7 +82,15 @@ public class Main {
         int teuersterGegenstand = Problem4.findeTeuerstenGegenstand(tastaturen, usbLaufwerke);
         System.out.println("Das teuerste Objekt: " + teuersterGegenstand);
 
-
+        int teuersteUsbLaufwerk = Problem4.findeTeuerstesUsbLaufwerk(usbLaufwerke, budget);
+        System.out.println("Das teuerste usbLaufwerk mit ein Budget: " + teuersteUsbLaufwerk);
+        // 4.3
+        int ausgaben = Problem4.berechneAusgaben(budget, tastaturen, usbLaufwerke);
+        if (ausgaben != -1) {
+            System.out.println("Die Ausgaben von Markus: " + ausgaben);
+        } else {
+            System.out.println("Markus kann beide Produkte nicht mit dem gegebenen Budget kaufen");
+        }
     }
 
 }
