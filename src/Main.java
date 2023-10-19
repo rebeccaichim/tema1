@@ -78,6 +78,11 @@ public class Main {
         int billigsteTastatur = Problem4.findeBilligsteTastatur(tastaturen);
         System.out.println("Die billigste Tastatur: " + billigsteTastatur);
 
+        //4.2
+        int teuersterGegenstand = Problem4.findeTeuerstenGegenstand(tastaturen, usbLaufwerke);
+        System.out.println("Das teuerste Objekt: " + teuersterGegenstand);
+
+
     }
 
 }

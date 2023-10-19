@@ -15,4 +15,25 @@ public class Problem4 {
         }
         return billigste;
     }
+    public static int findeTeuerstenGegenstand(int[] tastaturen, int[] usbLaufwerke) {
+        int teuersterTastatur = 0;
+        if (tastaturen.length > 0) {
+            teuersterTastatur = tastaturen[0];
+            for (int tastatur : tastaturen) {
+                if (tastatur > teuersterTastatur) {
+                    teuersterTastatur = tastatur;
+                }
+            }
+        }
+        int teuerstesUsbLaufwerk = 0;
+        if (usbLaufwerke.length > 0) {
+            teuerstesUsbLaufwerk = usbLaufwerke[0];
+            for (int usbLaufwerk : usbLaufwerke) {
+                if (usbLaufwerk > teuerstesUsbLaufwerk) {
+                    teuerstesUsbLaufwerk = usbLaufwerk;
+                }
+            }
+        }
+        return Math.max(teuersterTastatur, teuerstesUsbLaufwerk);
+    }
 }
