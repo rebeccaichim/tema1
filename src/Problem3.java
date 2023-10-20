@@ -3,20 +3,20 @@ import java.util.Arrays;
 public class Problem3 {
     // Suma numerelor ca array
     public static int[] berechneSumme(int[] zahl1, int[] zahl2) {
-        int n = zahl1.length;
+        int n = Math.max(zahl1.length, zahl2.length);
         int carry = 0;
         int[] summe = new int[n];
         for (int i = n - 1; i >= 0; i--) {
-            int tempSumme = zahl1[i] + zahl2[i] + carry;
+            int digit1 = i < zahl1.length ? zahl1[i] : 0;
+            int digit2 = i < zahl2.length ? zahl2[i] : 0;
+            int tempSumme = digit1 + digit2 + carry;
             summe[i] = tempSumme % 10;
             carry = tempSumme / 10;
         }
         if (carry > 0) {
             int[] neueSumme = new int[n + 1];
             neueSumme[0] = carry;
-            for (int i = 1; i <= n; i++) {
-                neueSumme[i] = summe[i - 1];
-            }
+            System.arraycopy(summe, 0, neueSumme, 1, n);
             return neueSumme;
         }
         return summe;

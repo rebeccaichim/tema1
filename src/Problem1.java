@@ -25,7 +25,7 @@ public class Problem1 {
         return nichtAusreichende;
     }
 
-    // 2. Media notelor
+    // Media notelor
     public static double berechneDurchschnitt(int[] noten) {
         if (noten.length == 0) {
             return 0;
@@ -39,7 +39,7 @@ public class Problem1 {
         return (double) summe / noten.length;
     }
 
-    // 3. Array cu toate notele rotunjite
+    // Array cu toate notele rotunjite
     public static int[] abgerundeteNoten(int[] noten) {
         int[] abgerundeteArray = new int[noten.length];
         for (int i = 0; i < noten.length; i++) {
@@ -58,7 +58,7 @@ public class Problem1 {
         return abgerundeteArray;
     }
 
-    // 4. Nota maxima rotunjita
+    // Nota maxima rotunjita
     public static int maxAbgerundeteNote(int[] noten) {
         int maxAbgerundete = -1;
         for (int note : noten) {

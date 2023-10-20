@@ -6,7 +6,7 @@ public class TesteProblem2 {
         assert rezultatAsteptat == rezultatObtinut;
     }
     public void testFindeMaximaleZahlFalsCorect() {
-        int[] zahlen = {1};
+        int[] zahlen = {1,5};
         int rezultatAsteptat = 1;
         int rezultatObtinut = Problem2.findeMaximaleZahl(zahlen);
         assert rezultatAsteptat == rezultatObtinut;
@@ -18,8 +18,8 @@ public class TesteProblem2 {
         assert rezultatAsteptat == rezultatObtinut;
     }
     public void testFindeMinimaleZahlFalsCorect() {
-        int[] zahlen = {1};
-        int rezultatAsteptat = 1;
+        int[] zahlen = {1,5};
+        int rezultatAsteptat = 5;
         int rezultatObtinut = Problem2.findeMinimaleZahl(zahlen);
         assert rezultatAsteptat == rezultatObtinut;
     }
@@ -31,7 +31,7 @@ public class TesteProblem2 {
     }
 
     public void testFindeMaximaleSummeFalsCorect() {
-        int[] zahlen = {1};
+        int[] zahlen = {1,5};
         int rezultatAsteptat = 0;
         int rezultatObtinut = Problem2.findeMaximaleSumme(zahlen);
         assert rezultatAsteptat == rezultatObtinut;
@@ -44,8 +44,8 @@ public class TesteProblem2 {
         assert rezultatAsteptat == rezultatObtinut;
     }
     public void testFindeMinimaleSummeFalsCorect() {
-        int[] zahlen = {1};
-        int rezultatAsteptat = 0;
+        int[] zahlen = {1,5};
+        int rezultatAsteptat = 6;
         int rezultatObtinut = Problem2.findeMinimaleSumme(zahlen);
         assert rezultatAsteptat == rezultatObtinut;
     }

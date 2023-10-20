@@ -50,15 +50,20 @@ public class Problem4 {
         return teuerstesUsb;
     }
 
-    // Cea mai ieftina tastatura + cea mai scumpa unitate care intra in buget
+    // tastatura + unitate care intra in buget
     public static int berechneAusgaben(int budget, int[] tastaturen, int[] usbLaufwerke) {
-        int billigsteTastatur = findeBilligsteTastatur(tastaturen);
-        int teuerstesUsb = findeTeuerstesUsbLaufwerk(usbLaufwerke, budget - billigsteTastatur);
+        int maxSumme = -1;
 
-        if (billigsteTastatur == -1 || teuerstesUsb == -1) {
-            return -1;
+        for (int tastatur : tastaturen) {
+            for (int usbLaufwerk : usbLaufwerke) {
+                int summe = tastatur + usbLaufwerk;
+                if (summe <= budget && summe > maxSumme) {
+                    maxSumme = summe;
+                }
+            }
         }
 
-        return billigsteTastatur + teuerstesUsb;
+        return maxSumme;
     }
+
 }

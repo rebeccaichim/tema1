@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         // 1
-        int[] noten = {84, 29, 65, 38, 42};
+        int[] noten = {84, 29, 65, 38, 43, 51};
 
         // 1.1: Notele "nicht ausreichend"
         int[] nichtAusreichende = Problem1.nichtAusreichendeNoten(noten);
@@ -70,9 +70,9 @@ public class Main {
         System.out.println("Division der großen Zahl: " + Arrays.toString(division));
 
         // 4
-        int[] tastaturen = {40, 35, 70, 15, 45};
-        int[] usbLaufwerke = {20, 25, 30, 10};
-        int budget = 40;
+        int[] tastaturen = {40, 50, 60};
+        int[] usbLaufwerke = {8, 12};
+        int budget = 60;
 
         // 4.1
         int billigsteTastatur = Problem4.findeBilligsteTastatur(tastaturen);

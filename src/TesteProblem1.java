@@ -18,14 +18,14 @@ public class TesteProblem1 {
         int[] noten = {84, 29, 65, 38, 42};
         double rezultatAsteptat = 51.6;
         double rezultatObtinut = Problem1.berechneDurchschnitt(noten);
-        assert Math.abs(rezultatAsteptat - rezultatObtinut) < 0.01; // Precizie la sutime
+        assert Math.abs(rezultatAsteptat - rezultatObtinut) < 0.01;
     }
 
     public void testBerechneDurchschnittFalsCorect() {
         int[] noten = {};
         double rezultatAsteptat = 0.0;
         double rezultatObtinut = Problem1.berechneDurchschnitt(noten);
-        assert Math.abs(rezultatAsteptat - rezultatObtinut) < 0.01; // Precizie la sutime
+        assert Math.abs(rezultatAsteptat - rezultatObtinut) < 0.01;
     }
 
     public void testAbgerundeteNotenCorect() {

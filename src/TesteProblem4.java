@@ -7,8 +7,8 @@ public class TesteProblem4 {
         assert rezultatAsteptat == rezultatObtinut;
     }
     public void testFindeBilligsteTastaturFalsCorect() {
-        int[] tastaturen = {};
-        int rezultatAsteptat = -1;
+        int[] tastaturen = {31, 231, 32};
+        int rezultatAsteptat = 231;
         int rezultatObtinut = Problem4.findeBilligsteTastatur(tastaturen);
         assert rezultatAsteptat == rezultatObtinut;
     }
@@ -20,9 +20,9 @@ public class TesteProblem4 {
         assert rezultatAsteptat == rezultatObtinut;
     }
     public void testFindeTeuerstenGegenstandFalsCorect() {
-        int[] tastaturen = {};
-        int[] usbLaufwerke = {};
-        int rezultatAsteptat = 0;
+        int[] tastaturen = {12, 32, 15};
+        int[] usbLaufwerke = {70, 53, 33};
+        int rezultatAsteptat = 53;
         int rezultatObtinut = Problem4.findeTeuerstenGegenstand(tastaturen, usbLaufwerke);
         assert rezultatAsteptat == rezultatObtinut;
     }
@@ -35,8 +35,8 @@ public class TesteProblem4 {
     }
     public void testFindeTeuerstesUsbLaufwerkFalsCorect() {
         int[] usbLaufwerke = {25, 35};
-        int budget = 20;
-        int rezultatAsteptat = -1;
+        int budget = 26;
+        int rezultatAsteptat = 35;
         int rezultatObtinut = Problem4.findeTeuerstesUsbLaufwerk(usbLaufwerke, budget);
         assert rezultatAsteptat == rezultatObtinut;
     }
@@ -45,7 +45,7 @@ public class TesteProblem4 {
         int[] tastaturen = {40, 50, 60};
         int[] usbLaufwerke = {8, 12};
         int budget = 60;
-        int rezultatAsteptat = 50 + 8;
+        int rezultatAsteptat = 58;
         int rezultatObtinut = Problem4.berechneAusgaben(budget, tastaturen, usbLaufwerke);
         assert rezultatAsteptat == rezultatObtinut;
     }
@@ -53,7 +53,7 @@ public class TesteProblem4 {
         int[] tastaturen = {40, 70};
         int[] usbLaufwerke = {50};
         int budget = 60;
-        int rezultatAsteptat = -1;
+        int rezultatAsteptat = 50;
         int rezultatObtinut = Problem4.berechneAusgaben(budget, tastaturen, usbLaufwerke);
         assert rezultatAsteptat == rezultatObtinut;
     }
