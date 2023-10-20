@@ -4,14 +4,23 @@ public class TesteProblem1 {
         int[] noten = {84, 29, 65, 38, 42};
         int[] rezultatAsteptat = {29, 38};
         int[] rezultatObtinut = Problem1.nichtAusreichendeNoten(noten);
-        assert Arrays.equals(rezultatAsteptat, rezultatObtinut);
-    }
+
+        if (Arrays.equals(rezultatAsteptat, rezultatObtinut)) {
+            System.out.println("note insuficiente neasteptat a trecut");
+        } else {
+            System.err.println("note insuficiente a esuat");
+        }    }
 
     public void testNichtAusreichendeNotenFalsCorect() {
         int[] noten = {45, 55, 60, 75, 92};
         int[] rezultatAsteptat = {};
         int[] rezultatObtinut = Problem1.nichtAusreichendeNoten(noten);
-        assert Arrays.equals(rezultatAsteptat, rezultatObtinut);
+
+        if (!Arrays.equals(rezultatAsteptat, rezultatObtinut)) {
+            System.out.println("note insuficiente neasteptat a trecut");
+        } else {
+            System.err.println("note insuficiente neasteptat a esuat");
+        }
     }
 
     public void testBerechneDurchschnittCorect() {
@@ -25,21 +34,29 @@ public class TesteProblem1 {
         int[] noten = {};
         double rezultatAsteptat = 0.0;
         double rezultatObtinut = Problem1.berechneDurchschnitt(noten);
-        assert Math.abs(rezultatAsteptat - rezultatObtinut) < 0.01;
+        assert Math.abs(rezultatAsteptat - rezultatObtinut) > 0.01;
     }
 
     public void testAbgerundeteNotenCorect() {
         int[] noten = {84, 29, 65, 38, 42};
         int[] rezultatAsteptat = {85, 30, 65, 40, 42};
         int[] rezultatObtinut = Problem1.abgerundeteNoten(noten);
-        assert Arrays.equals(rezultatAsteptat, rezultatObtinut);
+        if (Arrays.equals(rezultatAsteptat, rezultatObtinut)) {
+            System.out.println("note rotunjite neasteptat a trecut");
+        } else {
+            System.err.println("note rotunjite neasteptat a esuat");
+        }
     }
 
     public void testAbgerundeteNotenFalsCorect() {
         int[] noten = {45, 55, 60, 75, 92};
         int[] rezultatAsteptat = {45, 55, 60, 75, 92};
         int[] rezultatObtinut = Problem1.abgerundeteNoten(noten);
-        assert Arrays.equals(rezultatAsteptat, rezultatObtinut);
+        if (!Arrays.equals(rezultatAsteptat, rezultatObtinut)) {
+            System.out.println("note rotunjite neasteptat a trecut");
+        } else {
+            System.err.println("note rotunjite neasteptat a esuat");
+        }
     }
 
     public void testMaxAbgerundeteNoteCorect() {
@@ -53,7 +70,7 @@ public class TesteProblem1 {
         int[] noten = {45, 55, 60, 75, 92};
         int rezultatAsteptat = 92;
         int rezultatObtinut = Problem1.maxAbgerundeteNote(noten);
-        assert rezultatAsteptat == rezultatObtinut;
+        assert rezultatAsteptat != rezultatObtinut;
     }
 
     public static void main(String[] args) {

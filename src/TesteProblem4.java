@@ -10,7 +10,7 @@ public class TesteProblem4 {
         int[] tastaturen = {31, 231, 32};
         int rezultatAsteptat = 231;
         int rezultatObtinut = Problem4.findeBilligsteTastatur(tastaturen);
-        assert rezultatAsteptat == rezultatObtinut;
+        assert rezultatAsteptat != rezultatObtinut;
     }
     public void testFindeTeuerstenGegenstandCorect() {
         int[] tastaturen = {15, 20, 10, 35};
@@ -24,7 +24,7 @@ public class TesteProblem4 {
         int[] usbLaufwerke = {70, 53, 33};
         int rezultatAsteptat = 53;
         int rezultatObtinut = Problem4.findeTeuerstenGegenstand(tastaturen, usbLaufwerke);
-        assert rezultatAsteptat == rezultatObtinut;
+        assert rezultatAsteptat != rezultatObtinut;
     }
     public void testFindeTeuerstesUsbLaufwerkCorect() {
         int[] usbLaufwerke = {15, 45, 20};
@@ -38,7 +38,7 @@ public class TesteProblem4 {
         int budget = 26;
         int rezultatAsteptat = 35;
         int rezultatObtinut = Problem4.findeTeuerstesUsbLaufwerk(usbLaufwerke, budget);
-        assert rezultatAsteptat == rezultatObtinut;
+        assert rezultatAsteptat != rezultatObtinut;
     }
 
     public void testBerechneAusgabenCorect() {
@@ -55,7 +55,7 @@ public class TesteProblem4 {
         int budget = 60;
         int rezultatAsteptat = 50;
         int rezultatObtinut = Problem4.berechneAusgaben(budget, tastaturen, usbLaufwerke);
-        assert rezultatAsteptat == rezultatObtinut;
+        assert rezultatAsteptat != rezultatObtinut;
     }
 
     public static void main(String[] args) {

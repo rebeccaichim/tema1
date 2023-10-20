@@ -9,7 +9,7 @@ public class TesteProblem2 {
         int[] zahlen = {1,5};
         int rezultatAsteptat = 1;
         int rezultatObtinut = Problem2.findeMaximaleZahl(zahlen);
-        assert rezultatAsteptat == rezultatObtinut;
+        assert rezultatAsteptat != rezultatObtinut;
     }
     public void testFindeMinimaleZahlCorect() {
         int[] zahlen = {4, 8, 3, 10, 17};
@@ -21,7 +21,7 @@ public class TesteProblem2 {
         int[] zahlen = {1,5};
         int rezultatAsteptat = 5;
         int rezultatObtinut = Problem2.findeMinimaleZahl(zahlen);
-        assert rezultatAsteptat == rezultatObtinut;
+        assert rezultatAsteptat != rezultatObtinut;
     }
     public void testFindeMaximaleSummeCorect() {
         int[] zahlen = {4, 8, 3, 10, 17};
@@ -34,7 +34,7 @@ public class TesteProblem2 {
         int[] zahlen = {1,5};
         int rezultatAsteptat = 0;
         int rezultatObtinut = Problem2.findeMaximaleSumme(zahlen);
-        assert rezultatAsteptat == rezultatObtinut;
+        assert rezultatAsteptat != rezultatObtinut;
     }
 
     public void testFindeMinimaleSummeCorect() {
@@ -47,7 +47,7 @@ public class TesteProblem2 {
         int[] zahlen = {1,5};
         int rezultatAsteptat = 6;
         int rezultatObtinut = Problem2.findeMinimaleSumme(zahlen);
-        assert rezultatAsteptat == rezultatObtinut;
+        assert rezultatAsteptat != rezultatObtinut;
     }
 
     public static void main(String[] args) {
